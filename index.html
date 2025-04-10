@@ -5,15 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vishwajit Deshmukh | Digital Marketing Resume</title>
   <link rel="stylesheet" href="styles.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
+  <!-- Sticky Header -->
   <header class="sticky-header">
-    <div class="container">
+    <div class="header-content">
       <h1 class="name">Vishwajit R. Deshmukh</h1>
-      <a href="resume.pdf" download class="download-btn">Download Resume</a>
+      <div class="contact-info">
+        <p>📞 Contact: 8390628397</p>
+        <p>✉️ Email: <a href="mailto:vishwajitdesh9025@gmail.com">vishwajitdesh9025@gmail.com</a></p>
+        <p>🔗 LinkedIn: <a href="https://www.linkedin.com/in/vishwajit-deshmukh" target="_blank">/vishwajit-deshmukh</a></p>
+      </div>
     </div>
   </header>
 
+  <!-- Download Button (Floating Sticky) -->
+  <a href="resume.pdf" class="download-btn" download>
+    <i class="fas fa-download"></i> Download Resume
+  </a>
+
+  <!-- Main Resume Content -->
   <main class="main-content">
     <section class="section zoom-box" id="summary">
       <h2 class="section-title">Professional Summary</h2>
@@ -80,6 +92,7 @@
     </section>
   </main>
 
+  <!-- Cursor Effect Script -->
   <script>
     document.addEventListener('mousemove', (e) => {
       document.body.style.setProperty('--x', `${e.clientX}px`);

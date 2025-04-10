@@ -1,119 +1,139 @@
-/* Global Styles */
+/* General Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Body Styling with cursor trail effect */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #f3f6fb;
+  background: radial-gradient(circle at var(--x, 50%) var(--y, 50%), #f0f4f8, #e8ecf1);
   color: #333;
-  overflow-x: hidden;
-  transition: background 0.2s ease;
+  line-height: 1.6;
+  padding: 20px;
+  cursor: default;
 }
 
-body:hover {
-  cursor: none;
-}
-
-body::before {
-  content: '';
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  pointer-events: none;
-  background: radial-gradient(circle at var(--x, 50%) var(--y, 50%), #e0f7fa, #f3f6fb 60%);
-  z-index: -1;
-  transition: background 0.15s;
-}
-
+/* Sticky Header */
 .sticky-header {
+  background: #ffffffcc;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  border: 2px solid #dce3eb;
+  margin-bottom: 40px;
   position: sticky;
   top: 0;
-  width: 100%;
-  background: #ffffff;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  z-index: 1000;
-  padding: 10px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  z-index: 999;
+  backdrop-filter: blur(5px);
 }
 
-.sticky-header .name {
-  font-size: 1.5rem;
-  font-weight: 600;
+.header-content h1.name {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #2c3e50;
 }
 
-.download-btn {
-  background-color: #007acc;
-  color: #fff;
-  padding: 10px 16px;
-  border-radius: 6px;
+.contact-info p {
+  font-size: 1rem;
+  margin: 5px 0;
+}
+
+.contact-info a {
+  color: #0077b5;
   text-decoration: none;
-  font-weight: 500;
-  transition: background 0.3s ease;
-  position: relative;
 }
 
-.download-btn:hover {
-  background-color: #005fa3;
-  box-shadow: 0 4px 12px rgba(0, 122, 204, 0.3);
+.contact-info a:hover {
+  text-decoration: underline;
 }
 
+/* Main Content Styling */
 .main-content {
-  max-width: 1100px;
-  margin: 40px auto;
-  padding: 0 20px;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
+/* Section Containers */
 .section {
   margin-bottom: 40px;
   transition: transform 0.3s ease;
 }
 
 .zoom-box:hover {
-  transform: scale(1.03);
+  transform: scale(1.02);
 }
 
+/* Section Titles */
 .section-title {
-  background-color: #d9e8fc;
-  padding: 12px 18px;
-  border-left: 6px solid #007acc;
-  font-size: 1.4rem;
-  margin-bottom: 16px;
+  background-color: #dce3eb;
+  padding: 10px 20px;
+  font-size: 1.5rem;
   border-radius: 8px;
+  margin-bottom: 15px;
+  display: inline-block;
   transition: transform 0.3s ease;
 }
 
+/* Content Box Styling */
 .content-box {
-  background-color: #ffffff;
-  border-left: 4px solid #007acc;
-  padding: 16px 20px;
-  border-radius: 6px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  background-color: #f8f9fb;
+  border-left: 5px solid #007acc;
+  padding: 15px 25px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .content-box ul {
-  list-style-type: square;
-  margin-left: 20px;
-  color: #444;
+  list-style: disc;
+  padding-left: 20px;
 }
 
 .content-box li {
   margin-bottom: 8px;
-  line-height: 1.6;
 }
 
-@media screen and (max-width: 768px) {
-  .sticky-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
+/* Download Button */
+.download-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #007acc;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+}
+
+.download-btn i {
+  margin-right: 8px;
+  font-size: 1rem;
+}
+
+.download-btn:hover {
+  transform: scale(1.1);
+  background-color: #005fa3;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .download-btn {
+    padding: 10px 14px;
+    font-size: 0.9rem;
   }
 
-  .download-btn {
-    align-self: flex-end;
+  .section-title {
+    font-size: 1.3rem;
+  }
+
+  .header-content h1.name {
+    font-size: 1.5rem;
   }
 }

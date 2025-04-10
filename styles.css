@@ -1,26 +1,26 @@
-/* General Reset */
+/* Reset and Base Styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Body Styling with cursor trail effect */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: radial-gradient(circle at var(--x, 50%) var(--y, 50%), #f0f4f8, #e8ecf1);
   color: #333;
   line-height: 1.6;
-  padding: 20px;
+  padding: 40px;
   cursor: default;
+  transition: background 0.3s ease;
 }
 
 /* Sticky Header */
 .sticky-header {
   background: #ffffffcc;
-  padding: 20px;
+  padding: 25px;
   text-align: center;
-  border-radius: 10px;
+  border-radius: 12px;
   border: 2px solid #dce3eb;
   margin-bottom: 40px;
   position: sticky;
@@ -30,14 +30,14 @@ body {
 }
 
 .header-content h1.name {
-  font-size: 2rem;
-  margin-bottom: 10px;
+  font-size: 2.2rem;
   color: #2c3e50;
+  margin-bottom: 15px;
 }
 
 .contact-info p {
   font-size: 1rem;
-  margin: 5px 0;
+  margin: 6px 0;
 }
 
 .contact-info a {
@@ -49,16 +49,18 @@ body {
   text-decoration: underline;
 }
 
-/* Main Content Styling */
+/* Main Content Area */
 .main-content {
-  max-width: 1000px;
+  max-width: 1100px;
   margin: 0 auto;
+  padding: 20px;
 }
 
-/* Section Containers */
+/* Section Wrapper */
 .section {
   margin-bottom: 40px;
   transition: transform 0.3s ease;
+  padding: 10px;
 }
 
 .zoom-box:hover {
@@ -68,40 +70,41 @@ body {
 /* Section Titles */
 .section-title {
   background-color: #dce3eb;
-  padding: 10px 20px;
-  font-size: 1.5rem;
-  border-radius: 8px;
-  margin-bottom: 15px;
+  padding: 12px 20px;
+  font-size: 1.6rem;
+  border-radius: 10px;
   display: inline-block;
   transition: transform 0.3s ease;
+  margin-bottom: 16px;
 }
 
-/* Content Box Styling */
+/* Section Content Boxes */
 .content-box {
   background-color: #f8f9fb;
-  border-left: 5px solid #007acc;
-  padding: 15px 25px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  border-left: 6px solid #007acc;
+  padding: 18px 26px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 .content-box ul {
   list-style: disc;
-  padding-left: 20px;
+  padding-left: 24px;
 }
 
 .content-box li {
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
 /* Download Button */
 .download-btn {
   position: fixed;
-  top: 20px;
+  top: 50%;
   right: 20px;
+  transform: translateY(-50%);
   background-color: #007acc;
   color: white;
-  padding: 12px 18px;
+  padding: 14px 22px;
   border-radius: 50px;
   text-decoration: none;
   font-weight: bold;
@@ -118,22 +121,29 @@ body {
 }
 
 .download-btn:hover {
-  transform: scale(1.1);
+  transform: translateY(-50%) scale(1.1);
   background-color: #005fa3;
 }
 
-/* Responsive */
+/* Responsive Design */
 @media (max-width: 768px) {
+  .main-content {
+    padding: 15px;
+  }
+
   .download-btn {
-    padding: 10px 14px;
+    padding: 10px 16px;
     font-size: 0.9rem;
+    top: auto;
+    bottom: 20px;
+    transform: none;
   }
 
   .section-title {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
   }
 
   .header-content h1.name {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
 }

@@ -1,85 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Vishwajit R. Deshmukh - Digital Marketing Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Embedded CSS starts here */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f6f8;
+      color: #1a1a1a;
+      padding-top: 100px;
+    }
+
+    .header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: #2c3e50;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      z-index: 1000;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .header a {
+      color: #1abc9c;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .header a:hover {
+      text-decoration: underline;
+    }
+
+    .main-content {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .section {
+      margin-bottom: 40px;
+      animation: zoomIn 0.6s ease forwards;
+      transform: scale(0.95);
+      opacity: 0;
+    }
+
+    .section h2 {
+      font-size: 1.8rem;
+      color: #2c3e50;
+      margin-bottom: 15px;
+      border-left: 5px solid #1abc9c;
+      padding-left: 10px;
+    }
+
+    .content-box {
+      padding: 20px;
+      border-radius: 10px;
+      background-color: #ffffff;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      animation: zoomIn 0.8s ease forwards;
+      transform: scale(0.95);
+      opacity: 0;
+    }
+
+    ul {
+      list-style: disc inside;
+      margin-top: 10px;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    @keyframes zoomIn {
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+  </style>
 </head>
 <body>
 
-  <!-- Sticky Header -->
-  <header class="header">
-    <div class="header-container">
+  <div class="header">
+    <div>
       <h1>Vishwajit R. Deshmukh</h1>
-      <p>Associate Team Lead – Digital Marketing</p>
-      <p>📞 8390628397 | 📧 <a href="mailto:vishwajitdesh9025@gmail.com">vishwajitdesh9025@gmail.com</a></p>
-      <p><a href="https://www.linkedin.com/in/vishwajit-deshmukh" target="_blank">LinkedIn Profile</a></p>
+      <p>📞 8390628397 | ✉️ <a href="mailto:vishwajitdesh9025@gmail.com">vishwajitdesh9025@gmail.com</a> | 🔗 <a href="https://www.linkedin.com/in/vishwajit-deshmukh" target="_blank">LinkedIn Profile</a></p>
     </div>
-  </header>
+  </div>
 
-  <!-- Main Content -->
-  <main class="main-content">
-    
-    <section class="section">
+  <div class="main-content">
+
+    <div class="section">
       <h2>Summary</h2>
       <div class="content-box">
-        <p>Digital Marketing Professional with 6 years of experience specializing in SEO, lead generation, and brand management. Proven expertise in developing and implementing SEO strategies that drive organic traffic and generate 50-150 leads per day. Skilled in keyword research, competitor analysis, and optimizing on-page and off-page elements. Experienced in leading teams and launching new websites with a strong data-driven mindset.</p>
+        <p>Digital Marketing Professional with 6 years of experience specializing in SEO, lead generation, and brand management. Proven expertise in developing and implementing SEO strategies that drive organic traffic and generate 50-120 leads per day. Skilled in keyword research, competitor analysis, and optimizing on-page and off-page elements to improve search visibility.</p>
       </div>
-    </section>
+    </div>
 
-    <section class="section">
+    <div class="section">
       <h2>Skills</h2>
       <div class="content-box">
         <ul>
-          <li>On-Page & Off-Page SEO</li>
-          <li>Technical SEO Audits</li>
-          <li>LinkedIn Sales Navigator Lead Generation</li>
-          <li>20,000+ Web Pages Optimized</li>
-          <li>Core Web Vitals Optimization</li>
-          <li>Keyword Research (SEMRush, Moz Pro, SpyFu, Ahrefs)</li>
-          <li>Local SEO Strategies</li>
-          <li>AI in SEO: ChatGPT, Surfer SEO, Clearscope</li>
-          <li>Google Analytics & GA4, Data Studio Reporting</li>
-          <li>Email Automation & A/B Testing</li>
-          <li>Website Testing & Content QC</li>
-          <li>Branding & Social Media Management</li>
+          <li>On-page SEO, Schema, Core Web Vitals</li>
+          <li>Off-page SEO, Link building, PR submissions</li>
+          <li>Lead generation using LinkedIn Sales Navigator</li>
+          <li>SEO audit of 20,000+ web pages</li>
+          <li>Keyword Research using SEMrush, Moz, SpyFu</li>
+          <li>AI tools: ChatGPT, Surfer SEO, Clearscope</li>
+          <li>Conversion tracking, Google Tag Manager</li>
+          <li>Email campaign tracking and automation</li>
         </ul>
       </div>
-    </section>
+    </div>
 
-    <section class="section">
+    <div class="section">
       <h2>Experience</h2>
       <div class="content-box">
-        <h3>Associate Team Lead – Digital Marketing | Absolute Reports Pvt. Ltd. | Apr 2022 – Present</h3>
+        <p><strong>Associate Team Lead – Digital Marketing | Absolute Reports Pvt. Ltd.</strong><br>April 2022 – Present</p>
         <ul>
-          <li>Drove SEO strategy for www.businessresearchinsights.com from scratch to 6,500+ daily traffic and 100-120 leads/day</li>
-          <li>Managed content & sales teams to align SEO goals</li>
+          <li>Launched www.businessresearchinsights.com and grew traffic to 6,500+/day</li>
+          <li>Generated 100–120 leads/day through SEO</li>
         </ul>
-        <h3>Senior Digital Marketing Executive | Apr 2021 – Apr 2022</h3>
+
+        <p><strong>Senior Digital Marketing Executive</strong><br>April 2021 – April 2022</p>
         <ul>
-          <li>Led email campaigns generating 60-70 monthly leads</li>
-          <li>Generated 250+ leads via press release platforms</li>
-          <li>Ideated and launched www.businessresearchinsights.com</li>
+          <li>Led email campaigns generating 60–70 monthly leads</li>
+          <li>Built lead pipelines using PR platforms</li>
         </ul>
-        <h3>Digital Marketing Executive | Dec 2018 – Apr 2021</h3>
+
+        <p><strong>Digital Marketing Executive</strong><br>Dec 2018 – April 2021</p>
         <ul>
-          <li>Built foundation in SEO, email marketing & lead generation</li>
+          <li>Assisted in SEO & email campaigns</li>
         </ul>
       </div>
-    </section>
+    </div>
 
-    <section class="section">
+    <div class="section">
       <h2>Education</h2>
       <div class="content-box">
         <ul>
-          <li>MBA in Business Analytics – 2022 to 2024 – SPPU, Pune</li>
-          <li>B.Com – 2015 to 2018 – Amravati</li>
+          <li>MBA in Business Analytics – 2022–2024, SPPU Pune</li>
+          <li>B.Com – 2015–2018, Amravati</li>
         </ul>
       </div>
-    </section>
+    </div>
 
-    <section class="section">
+    <div class="section">
       <h2>Languages</h2>
       <div class="content-box">
         <ul>
@@ -88,20 +164,21 @@
           <li>Marathi</li>
         </ul>
       </div>
-    </section>
+    </div>
 
-    <section class="section">
+    <div class="section">
       <h2>Tools</h2>
       <div class="content-box">
         <ul>
-          <li>Advanced Excel, Google Analytics, GA4, SEMRush, Moz Pro, SpyFu</li>
-          <li>Google Search Console, Ubersuggest, SimilarWeb, Keyword Everywhere</li>
-          <li>LinkedIn Sales Navigator, Google Tag Manager, Algoroo</li>
+          <li>Google Analytics, GA4, GSC, GTM</li>
+          <li>SEMRush, Moz Pro, SimilarWeb, SpyFu</li>
+          <li>Advanced Excel, Keyword Everywhere</li>
+          <li>LinkedIn Sales Navigator, Ubersuggest</li>
         </ul>
       </div>
-    </section>
+    </div>
 
-  </main>
+  </div>
 
 </body>
 </html>

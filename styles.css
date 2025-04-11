@@ -1,143 +1,138 @@
-/* General Reset */
+/* Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Body Styling */
+/* Body */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f4f7fb;
-    color: #2c3e50;
-    line-height: 1.6;
-}
-
-/* Container */
-.container {
-    max-width: 1000px;
-    margin: 120px auto 40px;
-    padding: 0 20px;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f0f4f8;
+  color: #2d3748;
+  padding-top: 120px;
 }
 
 /* Sticky Header */
 .sticky-header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: #0c1e3a;
-    color: #ffffff;
-    padding: 20px 0;
-    text-align: center;
-    z-index: 1000;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease-in-out;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #0d1b2a;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  z-index: 999;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
-.sticky-header .header-content h1 {
-    font-size: 28px;
-    margin-bottom: 5px;
+.header-content h1 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 5px;
 }
 
-.sticky-header .header-content p {
-    font-size: 16px;
+.header-content p {
+  font-size: 15px;
+  margin: 2px 0;
 }
 
-.sticky-header .header-content a {
-    display: inline-block;
-    margin-top: 8px;
-    color: #00e3cc;
-    text-decoration: none;
-    font-weight: bold;
+.header-content a {
+  color: #00c9a7;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 5px;
 }
 
-.sticky-header .header-content a:hover {
-    text-decoration: underline;
-    color: #ffffff;
+.header-content a:hover {
+  color: #ffffff;
+  text-decoration: underline;
 }
 
-/* Section Box */
+/* Main Container */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+/* Section Styling */
 .section-box {
-    background-color: #ffffff;
-    margin-bottom: 40px;
-    border-radius: 12px;
-    padding: 30px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-    animation: zoomIn 0.8s ease;
-    transition: transform 0.3s ease;
+  background-color: #ffffff;
+  margin-bottom: 40px;
+  border-radius: 12px;
+  padding: 25px 30px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  animation: zoomIn 0.5s ease-in-out;
+  transition: transform 0.3s ease;
 }
 
 .section-box:hover {
-    transform: scale(1.02);
+  transform: scale(1.02);
 }
 
-/* Headings */
 .section-box h2 {
-    font-size: 26px;
-    margin-bottom: 20px;
-    color: #003366;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #0d1b2a;
+  border-left: 5px solid #00c9a7;
+  padding-left: 12px;
 }
 
-/* Content Boxes Inside Sections */
+/* Inner Content Boxes */
 .content-box {
-    background-color: #eaf3fa;
-    border-left: 5px solid #00bcd4;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-}
-
-.content-box h3 {
-    color: #005b8f;
-    margin-bottom: 10px;
+  background-color: #e0f7f4;
+  padding: 18px 22px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  border-left: 5px solid #00bfa5;
+  animation: zoomIn 0.6s ease-in-out;
 }
 
 .content-box ul {
-    margin-left: 20px;
-    list-style-type: disc;
+  list-style: disc;
+  padding-left: 20px;
+  color: #2d3748;
 }
 
 .content-box li {
-    margin-bottom: 8px;
+  margin-bottom: 8px;
 }
 
 /* Links */
 a {
-    color: #0077b6;
-    transition: color 0.2s ease;
+  color: #0077b6;
+  transition: 0.3s;
 }
 
 a:hover {
-    color: #023e8a;
+  color: #023e8a;
 }
 
 /* Zoom In Animation */
 @keyframes zoomIn {
-    0% {
-        opacity: 0;
-        transform: scale(0.95);
-    }
-    100% {
-        opacity: 1;
-        transform: scale(1);
-    }
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-    .sticky-header .header-content h1 {
-        font-size: 22px;
-    }
+/* Responsive */
+@media (max-width: 768px) {
+  .header-content h1 {
+    font-size: 20px;
+  }
 
-    .section-box {
-        padding: 20px;
-    }
+  .section-box h2 {
+    font-size: 20px;
+  }
 
-    .section-box h2 {
-        font-size: 22px;
-    }
-
-    .container {
-        margin-top: 140px;
-    }
+  .container {
+    padding: 20px 15px;
+  }
 }

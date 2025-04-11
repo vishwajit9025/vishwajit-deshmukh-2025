@@ -1,4 +1,4 @@
-/* Reset and Base Styles */
+/* Reset and base styling */
 * {
   margin: 0;
   padding: 0;
@@ -7,143 +7,214 @@
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: radial-gradient(circle at var(--x, 50%) var(--y, 50%), #f0f4f8, #e8ecf1);
-  color: #333;
+  background: #f5f7fa;
+  color: #222;
   line-height: 1.6;
-  padding: 40px;
-  cursor: default;
-  transition: background 0.3s ease;
+  position: relative;
+  cursor: none;
 }
 
-/* Sticky Header */
-.sticky-header {
-  background: #ffffffcc;
-  padding: 25px;
-  text-align: center;
-  border-radius: 12px;
-  border: 2px solid #dce3eb;
-  margin-bottom: 40px;
-  position: sticky;
-  top: 0;
-  z-index: 999;
-  backdrop-filter: blur(5px);
-}
-
-.header-content h1.name {
-  font-size: 2.2rem;
-  color: #2c3e50;
-  margin-bottom: 15px;
-}
-
-.contact-info p {
-  font-size: 1rem;
-  margin: 6px 0;
-}
-
-.contact-info a {
-  color: #0077b5;
-  text-decoration: none;
-}
-
-.contact-info a:hover {
-  text-decoration: underline;
-}
-
-/* Main Content Area */
-.main-content {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-/* Section Wrapper */
-.section {
-  margin-bottom: 40px;
-  transition: transform 0.3s ease;
-  padding: 10px;
-}
-
-.zoom-box:hover {
-  transform: scale(1.02);
-}
-
-/* Section Titles */
-.section-title {
-  background-color: #dce3eb;
-  padding: 12px 20px;
-  font-size: 1.6rem;
-  border-radius: 10px;
-  display: inline-block;
-  transition: transform 0.3s ease;
-  margin-bottom: 16px;
-}
-
-/* Section Content Boxes */
-.content-box {
-  background-color: #f8f9fb;
-  border-left: 6px solid #007acc;
-  padding: 18px 26px;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-}
-
-.content-box ul {
-  list-style: disc;
-  padding-left: 24px;
-}
-
-.content-box li {
-  margin-bottom: 10px;
-}
-
-/* Download Button */
-.download-btn {
+/* Custom cursor */
+.cursor-effect {
+  width: 18px;
+  height: 18px;
+  border: 2px solid #0b5ed7;
+  border-radius: 50%;
   position: fixed;
-  top: 50%;
-  right: 20px;
-  transform: translateY(-50%);
-  background-color: #007acc;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+  transition: all 0.05s ease;
+}
+
+/* Layout structure */
+.layout {
+  display: flex;
+  padding: 2rem;
+}
+
+/* Sidebar navigation */
+.sidebar {
+  position: sticky;
+  top: 20px;
+  width: 200px;
+  background: #ffffff;
+  padding: 1rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  border-radius: 12px;
+  margin-right: 2rem;
+  height: max-content;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar a {
+  display: block;
+  padding: 8px 12px;
+  margin-bottom: 6px;
+  color: #0b5ed7;
+  font-weight: 500;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.sidebar a:hover {
+  background-color: #e7f0ff;
+  transform: translateX(4px);
+}
+
+/* Main content styling */
+.resume-container {
+  flex: 1;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.06);
+  padding: 3rem;
+}
+
+/* Hero / Header */
+.hero {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  color: #0b5ed7;
+}
+
+.hero p, .hero a {
+  font-size: 1rem;
+  color: #444;
+}
+
+.download-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.8rem 1.6rem;
+  background-color: #0b5ed7;
   color: white;
-  padding: 14px 22px;
-  border-radius: 50px;
+  border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease, background-color 0.3s ease;
-  display: flex;
-  align-items: center;
-  z-index: 1000;
-}
-
-.download-btn i {
-  margin-right: 8px;
-  font-size: 1rem;
+  transition: background 0.3s ease, transform 0.2s;
 }
 
 .download-btn:hover {
-  transform: translateY(-50%) scale(1.1);
-  background-color: #005fa3;
+  background-color: #073e9b;
+  transform: scale(1.05);
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .main-content {
-    padding: 15px;
-  }
+/* Section styles */
+.section {
+  margin-bottom: 3rem;
+}
 
-  .download-btn {
-    padding: 10px 16px;
-    font-size: 0.9rem;
-    top: auto;
-    bottom: 20px;
-    transform: none;
-  }
+.section h2 {
+  font-size: 1.8rem;
+  color: #0b5ed7;
+  margin-bottom: 1rem;
+  position: relative;
+}
 
-  .section-title {
-    font-size: 1.4rem;
-  }
+.section p,
+.section ul,
+.section li {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+}
 
-  .header-content h1.name {
-    font-size: 1.8rem;
+.section ul {
+  padding-left: 1.2rem;
+}
+
+/* Grid skill list */
+.grid {
+  display: flex;
+  gap: 2rem;
+}
+
+.grid ul {
+  flex: 1;
+}
+
+/* Job section */
+.job {
+  margin-top: 1rem;
+}
+
+/* Blockquotes (Testimonials) */
+blockquote {
+  border-left: 4px solid #0b5ed7;
+  padding-left: 1rem;
+  margin-bottom: 1.5rem;
+  font-style: italic;
+  color: #444;
+  background: #f9fbff;
+  border-radius: 8px;
+}
+
+/* Contact Form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+form label {
+  font-weight: 600;
+}
+
+form input,
+form textarea {
+  padding: 0.8rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: #0b5ed7;
+}
+
+form button {
+  width: fit-content;
+  background-color: #0b5ed7;
+  color: white;
+  padding: 0.7rem 1.4rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+form button:hover {
+  background-color: #073e9b;
+  transform: scale(1.03);
+}
+
+/* Responsive */
+@media screen and (max-width: 1024px) {
+  .layout {
+    flex-direction: column;
+  }
+  .sidebar {
+    position: static;
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+  .resume-container {
+    padding: 2rem;
+  }
+  .hero h1 {
+    font-size: 2rem;
   }
 }

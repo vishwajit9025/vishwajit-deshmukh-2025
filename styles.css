@@ -1,10 +1,17 @@
-/* General Page Style */
-body {
+/* Base Reset and Global Styles */
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
   padding: 20px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f4f4f4;
   cursor: crosshair;
+  color: #222;
+  line-height: 1.6;
 }
 
 /* Sticky Header */
@@ -21,16 +28,17 @@ body {
 }
 
 .sticky-header h1 {
-  margin: 0;
-  font-size: 28px;
-  color: #222;
+  font-size: 26px;
+  font-weight: bold;
 }
 
 .sticky-header p,
 .sticky-header a {
+  font-size: 15px;
   margin: 4px 0;
   color: #333;
   text-decoration: none;
+  display: block;
 }
 
 .sticky-header a:hover {
@@ -40,13 +48,16 @@ body {
 
 /* Main Container */
 .container {
-  margin-top: 200px; /* So content starts below sticky header */
+  margin-top: 200px;
   padding: 20px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* Section Box */
+/* Section Box Styling */
 .box {
-  background-color: #ffffff;
+  background-color: #fff;
   padding: 20px;
   margin-bottom: 20px;
   border-radius: 12px;
@@ -54,17 +65,15 @@ body {
   transition: transform 0.3s ease, background-color 0.3s, color 0.3s;
 }
 
-/* Hover Zoom Effect */
 .hover-zoom:hover {
   transform: scale(1.03);
   background-color: #0077b5;
   color: #fff;
 }
 
-/* Heading Effects */
 .hover-heading {
   font-size: 24px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   transition: transform 0.3s ease, color 0.3s;
 }
 
@@ -73,7 +82,15 @@ body {
   color: #0077b5;
 }
 
-/* Download Button */
+ul {
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+/* Download Resume Button */
 .download-btn {
   position: fixed;
   bottom: 30px;
@@ -93,11 +110,49 @@ body {
   transform: scale(1.05);
 }
 
-/* List Styling */
-ul {
-  padding-left: 20px;
+/* Responsive Design */
+@media (max-width: 768px) {
+  .sticky-header h1 {
+    font-size: 22px;
+  }
+
+  .sticky-header p,
+  .sticky-header a {
+    font-size: 13px;
+  }
+
+  .container {
+    padding: 10px;
+    margin-top: 180px;
+  }
+
+  .box {
+    padding: 15px;
+  }
+
+  .hover-heading {
+    font-size: 20px;
+  }
+
+  .download-btn {
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 16px;
+    font-size: 14px;
+  }
 }
 
-li {
-  margin-bottom: 8px;
+@media (max-width: 480px) {
+  .sticky-header {
+    padding: 10px;
+  }
+
+  .sticky-header h1 {
+    font-size: 18px;
+  }
+
+  .download-btn {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
 }

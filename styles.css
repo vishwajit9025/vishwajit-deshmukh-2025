@@ -1,4 +1,4 @@
-/* Base Reset and Global Styles */
+/* Reset and base styles */
 * {
   margin: 0;
   padding: 0;
@@ -8,37 +8,38 @@
 body {
   padding: 20px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f4f4f4;
-  cursor: crosshair;
+  background-color: #f9f9f9;
   color: #222;
   line-height: 1.6;
+  cursor: crosshair;
 }
 
-/* Sticky Header */
+/* Sticky header */
 .sticky-header {
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
-  text-align: center;
-  background-color: #ffffffee;
-  padding: 15px 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  z-index: 999;
+  background-color: #ffffffdd;
   backdrop-filter: blur(10px);
+  padding: 15px 10px;
+  text-align: center;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 .sticky-header h1 {
   font-size: 26px;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .sticky-header p,
 .sticky-header a {
-  font-size: 15px;
-  margin: 4px 0;
-  color: #333;
-  text-decoration: none;
   display: block;
+  font-size: 15px;
+  margin-top: 4px;
+  color: #444;
+  text-decoration: none;
 }
 
 .sticky-header a:hover {
@@ -46,27 +47,27 @@ body {
   text-decoration: underline;
 }
 
-/* Main Container */
+/* Main content container */
 .container {
   margin-top: 200px;
-  padding: 20px;
   max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
+  padding: 20px;
 }
 
-/* Section Box Styling */
+/* Section boxes */
 .box {
-  background-color: #fff;
+  background: #fff;
   padding: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease, background-color 0.3s, color 0.3s;
 }
 
-.hover-zoom:hover {
-  transform: scale(1.03);
+.box:hover {
+  transform: scale(1.02);
   background-color: #0077b5;
   color: #fff;
 }
@@ -74,11 +75,11 @@ body {
 .hover-heading {
   font-size: 24px;
   margin-bottom: 15px;
-  transition: transform 0.3s ease, color 0.3s;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .hover-heading:hover {
-  transform: scale(1.1);
+  transform: scale(1.08);
   color: #0077b5;
 }
 
@@ -90,7 +91,7 @@ li {
   margin-bottom: 10px;
 }
 
-/* Download Resume Button */
+/* Download button */
 .download-btn {
   position: fixed;
   bottom: 30px;
@@ -101,7 +102,7 @@ li {
   border-radius: 30px;
   text-decoration: none;
   font-weight: bold;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   transition: background-color 0.3s, transform 0.3s;
 }
 
@@ -110,10 +111,10 @@ li {
   transform: scale(1.05);
 }
 
-/* Responsive Design */
+/* Responsive styles */
 @media (max-width: 768px) {
   .sticky-header h1 {
-    font-size: 22px;
+    font-size: 20px;
   }
 
   .sticky-header p,
